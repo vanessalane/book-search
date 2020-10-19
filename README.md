@@ -1,5 +1,5 @@
 # Book Search
-A Google Books API Search Engine
+A MERN Google Books API Search Engine
 
 Deployed app: https://vanessalane-booksearch.herokuapp.com/
 
