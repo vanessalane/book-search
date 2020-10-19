@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+
+// import react-bootstrap components
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
+
+// import custom components
 import SignUpForm from './SignupForm';
 import LoginForm from './LoginForm';
 
+// import auth module
 import Auth from '../utils/auth';
 
 const AppNavbar = () => {
