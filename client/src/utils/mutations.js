@@ -39,7 +39,12 @@ export const SAVE_BOOK = gql`
       _id
       username
       savedBooks {
+        authors
+        description
         bookId
+        image
+        link
+        title
       }
     }
   }
@@ -52,7 +57,12 @@ export const REMOVE_BOOK = gql`
       username
       bookCount
       savedBooks {
+        authors
+        description
         bookId
+        image
+        link
+        title
       }
     }
   }

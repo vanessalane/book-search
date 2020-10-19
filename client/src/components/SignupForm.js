@@ -7,19 +7,21 @@ import { ADD_USER } from '../utils/mutations';
 import Auth from '../utils/auth';
 
 const SignupForm = () => {
-  // set initial form state
+  // set states
   const [userFormData, setUserFormData] = useState({ username: '', email: '', password: '' });
-  // set state for form validation
   const [validated] = useState(false);
-  // set state for alert
   const [showAlert, setShowAlert] = useState(false);
+
+  // use GraphQL mutation to add user
   const [addUser] = useMutation(ADD_USER);
 
+  // form change handler
   const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
   };
 
+  // form submit handler
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
@@ -43,6 +45,7 @@ const SignupForm = () => {
       setShowAlert(true);
     }
 
+    // reset the form state
     setUserFormData({
       username: '',
       email: '',
